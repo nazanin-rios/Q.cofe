@@ -37,7 +37,6 @@ nav {
 }
 .logo {
   color: rgb(252, 242, 187) !important;
-  font-family: Bitter !important;
   font-size: 22px !important;
 }
 .bx {
@@ -89,10 +88,12 @@ li:hover a {
   border: none;
   border-radius: 0.5em;
   color: var(--clr-light);
-  /* box-shadow: 0 0 10px #61daff91, 0 0 30px #61daff91; */
 }
 .btn-sign-up:hover {
   background-position: right top;
+}
+.modal {
+  margin-top: 100px !important;
 }
 .modal-body {
   border: 1px solid #ffffffab;
@@ -158,7 +159,7 @@ li:hover a {
 }
 .ser-img > span {
   height: 200px;
-  width: 150px;
+  width: 120px;
   margin: 10px;
   border-radius: 10px;
   background-color: var(--clr-main);
@@ -173,6 +174,7 @@ li:hover a {
 }
 .ser-img > span > p {
   color: var(--clr-bg);
+  font-size: 14px;
 }
 .m-50 {
   margin-top: 70px !important;
@@ -270,14 +272,15 @@ li:hover a {
   height: 480px;
 }
 .bg-team-1 {
-  background-color: #f7e7cd;
+  background-color: #f7e7cdbb;
 }
 .bg-team-2 {
-  background-color: #f8eecf;
+  background-color: #f8eecfb7;
 }
 .bg-team-3 {
-  background-color: #f8dfd0;
+  background-color: #f8dfd0a9;
 }
+
 .img {
   height: 300px;
   overflow: hidden;
@@ -309,9 +312,6 @@ li:hover a {
   */
 .bg-slider {
   height: 400px;
-}
-.w-80 {
-  width: 80% !important;
 }
 .my-slider {
   width: 90% !important;
@@ -367,7 +367,7 @@ li:hover a {
   
   */
 .login {
-  background-image: url(./images/book.jpg);
+  background-image: url(./images/book.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -411,11 +411,31 @@ li:hover a {
 }
 input:focus ~ i,
 input:valid ~ i {
-  left: 25px;
+  left: 16px;
+}
+.btn-book-p {
+  margin-left: 15px;
+  transition: all 0.3s;
+}
+.bx-check {
+  font-weight: 1000;
+  padding: 0 5px;
+  color: var(--clr-main);
+  transition: all 0.2s;
+}
+.btn-book:hover .bx-check {
+  color: var(--clr-light);
+}
+.btn-book:hover .btn-book-p {
+  margin-left: 0px;
 }
 .btn-book {
   background-color: var(--clr-main);
   border-radius: 20px;
+  height: 45px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
 .color-register {
   color: #db8368;
@@ -573,7 +593,7 @@ input:valid ~ i {
   transform: scale(0);
   position: absolute;
   transition: all 0.3s;
-  transition-delay: 0.2s;
+  transition-delay: 0.1s;
 }
 .icons:hover .icon-id {
   transform: scale(1);
