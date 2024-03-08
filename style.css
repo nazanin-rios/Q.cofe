@@ -415,12 +415,6 @@ input:valid ~ i {
   left: 16px;
 }
 
-.btn-book {
-  background-color: var(--clr-main);
-  border-radius: 10px;
-  height: 45px;
-  transition: all 0.2s;
-}
 .color-register {
   color: #db8368;
   transition: all 0.2s;
@@ -428,10 +422,166 @@ input:valid ~ i {
 .color-register:hover {
   color: var(--clr-second);
 }
-.btn-book:hover {
-  transform: scale(0.97);
-  border-radius: 15px;
+
+.btn-top {
+  width: 150px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.button-top {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #141414;
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px #5a57664b;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+}
+.bx-up-arrow-alt {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+  transition-duration: 0.3s;
+}
+.button-top:hover {
+  width: 140px;
+  transition-duration: 0.3s;
+  background-color: var(--clr-second);
+  box-shadow: 0px 0px 0px 4px #da95807a;
+}
+.button-top:hover .bx-up-arrow-alt {
+  transition-duration: 0.3s;
+  transform: translateY(-50px);
+}
+.button-top::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Back to Top";
+  color: white;
+  transform: scale(0);
+  font-size: 15px;
+}
+.button-top:hover::before {
+  transform: scale(1);
+  bottom: unset;
+  transition-duration: 0.4s;
+}
+.btn-book {
+  height: 50px;
+}
+.btn-book a {
+  font-size: 20px;
+}
+.btn-book h2 {
+  height: 100%;
+  transition: all 0.2s;
+}
+.btn-book {
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s;
+  position: relative;
+  display: inline-block;
+  border-radius: 5px;
+}
+.btn-book > h2:hover {
+  border-radius: 5px;
+  background-color: var(--clr-main);
+}
+.btn-book > h2:hover a {
+  color: var(--clr-light);
+}
+.btn-book > a {
+  text-decoration: none;
+  font-size: 25px;
+}
+.btn-book span {
+  position: absolute;
+  display: block;
+}
+
+.btn-book span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--clr-main));
+  animation: btn-1 1s linear infinite;
+}
+@keyframes btn-1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.btn-book span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--clr-main));
+  animation: btn-2 1s linear infinite;
+  animation-delay: 0.55s;
+}
+@keyframes btn-2 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.btn-book span:nth-child(2) {
+  right: 0;
+  top: -100%;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--clr-main));
+  animation: btn-3 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes btn-3 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+.btn-book span:nth-child(4) {
+  left: 0;
+  bottom: -100%;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(360deg, transparent, var(--clr-main));
+  animation: btn-4 1s linear infinite;
+  animation-delay: 0.8s;
+}
+@keyframes btn-4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .form-login {
     display: flex;
@@ -459,11 +609,6 @@ input:valid ~ i {
     width: 20% !important;
     height: 50px;
   }
-
-  .btn-book-p {
-    margin-left: 15px;
-    transition: all 0.3s;
-  }
 }
 /* 
   
@@ -480,68 +625,7 @@ input:valid ~ i {
 .footer-item > a:hover {
   color: var(--clr-main) !important;
 }
-.footer-logo {
-  cursor: pointer;
-  overflow: hidden;
-  transition: all 0.3s;
-  position: relative;
-  display: inline-block;
-}
-.footer-logo > a {
-  text-decoration: none;
-  font-size: 25px;
-}
-.footer-logo span {
-  position: absolute;
-  display: block;
-}
-.footer-logo span:nth-child(1) {
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, transparent, var(--clr-main));
-}
-.footer-logo h2:hover span:nth-child(1) {
-  left: 100%;
-  transition: 0.4s;
-}
-.footer-logo span:nth-child(3) {
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, transparent, var(--clr-main));
-}
-.footer-logo h2:hover span:nth-child(3) {
-  right: 100%;
-  transition: 0.4s;
-  transition-delay: 0.4s;
-}
-.footer-logo span:nth-child(2) {
-  right: 0;
-  top: -100%;
-  height: 100%;
-  width: 2px;
-  background: linear-gradient(180deg, transparent, var(--clr-main));
-}
-.footer-logo h2:hover span:nth-child(2) {
-  top: 100%;
-  transition: 0.4s;
-  transition-delay: 0.25s;
-}
-.footer-logo span:nth-child(4) {
-  left: 0;
-  bottom: -100%;
-  height: 100%;
-  width: 2px;
-  background: linear-gradient(360deg, transparent, var(--clr-main));
-}
-.footer-logo h2:hover span:nth-child(4) {
-  bottom: 100%;
-  transition: 0.4s;
-  transition-delay: 0.65s;
-}
+
 .box-icon {
   height: 80px;
 }
@@ -582,12 +666,13 @@ input:valid ~ i {
   background: linear-gradient(45deg, #1efa60, #9effbd);
 }
 .icon-id {
-  color: var(--clr-light);
   transform: scale(0);
   position: absolute;
   transition: all 0.3s;
   transition-delay: 0.1s;
+  color: transparent;
 }
 .icons:hover .icon-id {
   transform: scale(1);
+  color: var(--clr-light);
 }
