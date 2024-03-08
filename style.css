@@ -187,6 +187,11 @@ li:hover a {
 .box-services:hover {
   transform: translateY(-8px);
 }
+@media screen and (min-width:768px) {
+  .ser-img > span{
+    width: 150px;
+  }
+}
 /* 
   
   section3
